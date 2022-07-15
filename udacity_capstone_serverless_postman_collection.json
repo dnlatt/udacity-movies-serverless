@@ -1,0 +1,249 @@
+{
+	"info": {
+		"_postman_id": "99b9736d-e1c4-4bb9-a851-b5fb3eb4c322",
+		"name": "Udacity Capstone Movies Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Get all movies",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/movies",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create movie",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Avatar\",\n\t\"dueDate\": \"2022-07-11\"\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/movies",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"movies"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update movie",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Titanic 2\",\n\t\"dueDate\": \"2022-12-11\",\n\t\"done\": true\n}"
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/movies/7765d656-4486-4eb5-b995-3babedf777ae",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"movies",
+								"7765d656-4486-4eb5-b995-3babedf777ae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Movie",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"type": "text",
+								"value": "Bearer {{authToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/movies/7765d656-4486-4eb5-b995-3babedf777ae",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"movies",
+								"7765d656-4486-4eb5-b995-3babedf777ae"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get attachment URL",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{authToken}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://{{apiId}}.execute-api.us-east-1.amazonaws.com/dev/movies/c2e3c1ec-6d54-46f7-a23a-d8e55cd48071/attachment",
+							"protocol": "https",
+							"host": [
+								"{{apiId}}",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"dev",
+								"movies",
+								"c2e3c1ec-6d54-46f7-a23a-d8e55cd48071",
+								"attachment"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "apiId",
+			"value": "2chgdjwj6d",
+			"type": "string"
+		},
+		{
+			"key": "authToken",
+			"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6InJkRGNHbGpwc2p2Nk03NzlPb1l6MyJ9.eyJpc3MiOiJodHRwczovL2Rldi1lbGxnNWtoOC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDg5ODU3NTQyMTQzNzc0MzMyNTgiLCJhdWQiOiJ5Y1dsRWtiOE9iZ085TGZEdXRwNERITGhTVUhscjNIUSIsImlhdCI6MTY1Nzg1NzEzNSwiZXhwIjoxNjU5Mjg5MTM1LCJhdF9oYXNoIjoiVzVVSmNnYnNUbHIzY2FabXdYeU01ZyIsIm5vbmNlIjoiWjRCR0xKaFlQeEdYQ3paVVVCMmJPZWZ2WmFLTmc1MmQifQ.oJJ-61mf22Rb6w9GFdLGtbbp4czqCCkyAne_uZTFoTeiHjmV6Sr7tAwo5qlkrsQIcn9YAz8cBePwlPRIcAyQoKjKLcNMIroSJOgN_VmQsGleVM6PCkcRJS_ai7iHqe5gWRM6HWZWcK518Zi19UdfRRN1bwDCNO2GHqFkCd0pCCbhk0-4hF5BbwY8nyPFi3ucZd8u3QwF3nyEQeC1X6iRL8SFea2S92hAWkJv0vWYzs4qDpDYi1DOgwfhH5UXJHEFzP0fYdTviIT2NOzEzO9TkkWpK66QGyEXn5rkMb45uKVMDxGdC3Q47r0V3LpNycqZIpVQ5qAMK2yUBAgr9p5UxA",
+			"type": "string"
+		}
+	]
+}
